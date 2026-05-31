@@ -42,9 +42,9 @@ export default function Page() {
     <main className="w-full overflow-hidden bg-[#FFFDFC]">
       {/* Navigation */}
       <nav className="sticky top-0 z-50 w-full border-b border-[#F0E0E0] bg-white/90 backdrop-blur-md">
-        <div className="mx-auto flex max-w-[1440px] items-center justify-between px-6 py-4 lg:px-10">
+        <div className="mx-auto flex max-w-[1440px] items-center justify-between gap-4 px-4 py-3 sm:px-6 lg:px-10 lg:py-4">
           <div className="flex items-center gap-3.5">
-            <div className="h-12 w-12 overflow-hidden rounded-[42%_58%_48%_52%/48%_42%_58%_52%] border border-[#F0D2D6] bg-[#FDF0F0] shadow-[0_10px_28px_rgba(196,132,138,0.14)]">
+            <div className="h-10 w-10 flex-shrink-0 overflow-hidden rounded-[42%_58%_48%_52%/48%_42%_58%_52%] border border-[#F0D2D6] bg-[#FDF0F0] shadow-[0_10px_28px_rgba(196,132,138,0.14)] sm:h-12 sm:w-12">
               <img
                 src="/mary-logo-full.jpeg"
                 alt=""
@@ -52,15 +52,15 @@ export default function Page() {
               />
             </div>
             <div>
-              <span className="block font-serif text-xl font-bold leading-none text-[#1A1A1A]">
+              <span className="block font-serif text-base font-bold leading-none text-[#1A1A1A] sm:text-xl">
                 Mary Jesse & Co.
               </span>
-              <span className="mt-1 block text-[10px] font-medium uppercase tracking-[0.22em] text-[#C4848A]">
+              <span className="mt-1 hidden text-[10px] font-medium uppercase tracking-[0.22em] text-[#C4848A] sm:block">
                 From Zen to Corrected Skin
               </span>
             </div>
           </div>
-          <div className="flex gap-12 items-center text-sm tracking-widest text-[#5A5A5A]">
+          <div className="hidden gap-12 items-center text-sm tracking-widest text-[#5A5A5A] lg:flex">
             <a href="#services" className="hover:text-[#C4848A] transition">Services</a>
             <a href="#about" className="hover:text-[#C4848A] transition">About</a>
             <a href="#gallery" className="hover:text-[#C4848A] transition">Gallery</a>
@@ -70,7 +70,7 @@ export default function Page() {
             href="https://maryjesse.glossgenius.com/booking-flow"
             target="_blank"
             rel="noopener noreferrer"
-            className="px-7 py-2.5 bg-[#C4848A] text-white rounded-full text-xs uppercase tracking-widest font-medium hover:bg-[#B07080] transition"
+            className="flex-shrink-0 rounded-full bg-[#C4848A] px-4 py-2 text-[10px] font-medium uppercase tracking-widest text-white transition hover:bg-[#B07080] sm:px-7 sm:py-2.5 sm:text-xs"
           >
             Book Now
           </a>
@@ -82,17 +82,17 @@ export default function Page() {
         {/* Decorative blobs */}
         <div className="absolute right-[8%] top-20 h-[460px] w-[460px] rounded-full bg-[#F9E4E4] opacity-45 blur-3xl"></div>
         <div className="absolute bottom-12 left-[32%] h-80 w-80 rounded-full bg-[#F7D8DC] opacity-25 blur-3xl"></div>
-        <div className="pointer-events-none absolute left-[5%] top-24 font-serif text-[220px] font-bold leading-none text-[#F4C4D0]/20">
+        <div className="pointer-events-none absolute left-[5%] top-24 hidden font-serif text-[220px] font-bold leading-none text-[#F4C4D0]/20 sm:block">
           MJ
         </div>
 
-        <div className="relative z-10 mx-auto grid min-h-[calc(100vh-88px)] max-w-[1440px] grid-cols-1 items-center gap-16 px-6 py-24 lg:grid-cols-[0.9fr_1.1fr] lg:px-10 lg:py-28">
+        <div className="relative z-10 mx-auto grid max-w-[1440px] grid-cols-1 items-center gap-10 px-4 py-14 sm:px-6 sm:py-20 lg:min-h-[calc(100vh-88px)] lg:grid-cols-[0.9fr_1.1fr] lg:gap-16 lg:px-10 lg:py-28">
           {/* Left column */}
           <div className="max-w-2xl lg:pr-4">
             <div className="text-xs uppercase tracking-widest text-[#C4848A] font-medium mb-6">
               Esthetician · Scalp Specialist · Arvada, CO
             </div>
-            <h1 className="font-serif text-[68px] leading-[1.05] font-bold text-[#1A1A1A] mb-8 lg:text-[82px]">
+            <h1 className="mb-6 font-serif text-[42px] font-bold leading-[1.05] text-[#1A1A1A] sm:text-[58px] lg:mb-8 lg:text-[82px]">
               Skin, scalp, and<br />self-care —<br />personalized for you.
             </h1>
             <p className="text-base leading-8 text-[#5A5A5A] max-w-md mb-10">
@@ -102,7 +102,7 @@ export default function Page() {
               href="https://maryjesse.glossgenius.com/booking-flow"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block px-8 py-3 bg-[#C4848A] text-white rounded-full text-xs uppercase tracking-widest font-medium hover:bg-[#B07080] transition"
+              className="inline-block rounded-full bg-[#C4848A] px-6 py-3 text-[11px] font-medium uppercase tracking-widest text-white transition hover:bg-[#B07080] sm:px-8 sm:text-xs"
             >
               Book Your First Appointment
             </a>
@@ -133,15 +133,15 @@ export default function Page() {
       </section>
 
       {/* Section 2: Services */}
-      <section id="services" className="w-full bg-[#FDF0F0] py-32">
-        <div className="mx-auto max-w-[1440px] px-6 lg:px-10">
-          <div className="grid grid-cols-2 gap-20 items-center">
+      <section id="services" className="w-full bg-[#FDF0F0] py-16 lg:py-32">
+        <div className="mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-10">
+          <div className="grid grid-cols-1 gap-10 items-center lg:grid-cols-2 lg:gap-20">
             {/* Left column */}
             <div className="flex flex-col">
               <div className="text-xs uppercase tracking-widest text-[#C4848A] font-medium mb-4">
                 Our Services
               </div>
-              <h2 className="font-serif text-[60px] leading-[1.05] font-bold text-[#1A1A1A] mb-6">
+              <h2 className="mb-5 font-serif text-[38px] font-bold leading-[1.05] text-[#1A1A1A] sm:text-5xl lg:mb-6 lg:text-[60px]">
                 Treatments built around you.
               </h2>
               <p className="text-base leading-8 text-[#5A5A5A] mb-10">
@@ -158,7 +158,7 @@ export default function Page() {
             </div>
 
             {/* Right column - Service cards */}
-            <div className="grid grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:gap-6">
               {[
                 { name: 'Facials', desc: 'Custom facials tailored to your skin type and concerns — from acne and aging to sensitivity and dryness.', price: 'Starting from $85' },
                 { name: 'Japanese Scalp Treatment', desc: 'A relaxing Head Spa ritual that deep-cleanses the scalp, boosts circulation, and supports healthy hair growth.', price: 'Starting from $95' },
@@ -167,7 +167,7 @@ export default function Page() {
                 { name: 'Skincare', desc: 'Professional-grade product recommendations and one-on-one skin coaching for results that last.', price: 'Custom pricing' },
                 { name: 'Wellness', desc: 'Holistic beauty and wellness services designed to help you slow down and feel your best.', price: 'Custom pricing' },
               ].map((service, idx) => (
-                <div key={idx} className="bg-white rounded-2xl p-8 min-h-[200px] flex flex-col">
+                <div key={idx} className="flex min-h-[180px] flex-col rounded-2xl bg-white p-6 lg:min-h-[200px] lg:p-8">
                   <div className="flex items-start gap-3 mb-3">
                     <span className="text-[#C4848A] text-lg font-bold mt-1">●</span>
                     <h3 className="font-serif text-lg font-bold text-[#1A1A1A] flex-1">{service.name}</h3>
@@ -183,9 +183,9 @@ export default function Page() {
 
       {/* Section 3: HeadSpa Feature */}
       <section className="w-full bg-white">
-        <div className="mx-auto grid max-w-[1600px] grid-cols-2 min-h-[660px]">
+        <div className="mx-auto grid max-w-[1600px] grid-cols-1 lg:min-h-[660px] lg:grid-cols-2">
           {/* Left - Image */}
-          <div className="h-full overflow-hidden">
+          <div className="h-80 overflow-hidden sm:h-[460px] lg:h-full">
             <img
               src="/IMG_6267.jpeg"
               alt="HeadSpa Treatment"
@@ -194,11 +194,11 @@ export default function Page() {
           </div>
 
           {/* Right - Content */}
-          <div className="bg-white flex flex-col justify-center px-16 py-20">
+          <div className="flex flex-col justify-center bg-white px-4 py-16 sm:px-6 lg:px-16 lg:py-20">
             <div className="text-xs uppercase tracking-widest text-[#C4848A] font-medium mb-6">
               Signature Service
             </div>
-            <h2 className="font-serif text-5xl font-bold text-[#1A1A1A] mb-8">
+            <h2 className="mb-6 font-serif text-[38px] font-bold leading-tight text-[#1A1A1A] sm:text-5xl lg:mb-8">
               Deep calm, visible renewal.
             </h2>
             <p className="text-base leading-8 text-[#5A5A5A] mb-10">
@@ -232,14 +232,14 @@ export default function Page() {
       </section>
 
       {/* Section 4: Results */}
-      <section className="w-full bg-[#FDF0F0] py-32">
-        <div className="mx-auto grid max-w-[1440px] grid-cols-2 gap-16 px-6 lg:px-10 items-center">
+      <section className="w-full bg-[#FDF0F0] py-16 lg:py-32">
+        <div className="mx-auto grid max-w-[1440px] grid-cols-1 gap-10 px-4 sm:px-6 lg:grid-cols-2 lg:gap-16 lg:px-10 items-center">
           {/* Left */}
           <div>
             <div className="text-xs uppercase tracking-widest text-[#C4848A] font-medium mb-4">
               Client Results
             </div>
-            <h2 className="font-serif text-5xl font-bold text-[#1A1A1A] mb-8">
+            <h2 className="mb-6 font-serif text-[38px] font-bold leading-tight text-[#1A1A1A] sm:text-5xl lg:mb-8">
               Corrected skin results, without the clinical coldness.
             </h2>
             <p className="text-base leading-8 text-[#5A5A5A] mb-8">
@@ -263,7 +263,7 @@ export default function Page() {
           </div>
 
           {/* Right - Asymmetric grid */}
-          <div className="grid grid-cols-2 gap-4">
+          <div className="grid grid-cols-2 gap-3 sm:gap-4">
             {[
               { src: '/facial.jpeg', alt: 'Facial serum treatment with blue gloves', label: 'In Treatment' },
               { src: '/headspa.jpeg', alt: 'Client during HeadSpa scalp treatment', label: 'HeadSpa Ritual' },
@@ -280,16 +280,16 @@ export default function Page() {
       </section>
 
       {/* Section 5: Meet Mary */}
-      <section id="about" className="relative w-full bg-white py-32">
-        <div className="pointer-events-none absolute right-[8%] top-8 font-serif text-[170px] font-bold leading-none text-[#F4C4D0]/15">
+      <section id="about" className="relative w-full bg-white py-16 lg:py-32">
+        <div className="pointer-events-none absolute right-[8%] top-8 hidden font-serif text-[170px] font-bold leading-none text-[#F4C4D0]/15 sm:block">
           MJ
         </div>
-        <div className="relative mx-auto grid max-w-[1440px] grid-cols-2 gap-20 px-6 lg:px-10 items-center">
+        <div className="relative mx-auto grid max-w-[1440px] grid-cols-1 gap-10 px-4 sm:px-6 lg:grid-cols-2 lg:gap-20 lg:px-10 items-center">
           {/* Left - Image */}
           <div className="relative flex justify-start">
             <MeetMaryBlob />
             <div
-              className="w-[460px] h-[620px] bg-gray-200 overflow-hidden shadow-[0_28px_70px_rgba(44,24,16,0.10)]"
+              className="h-[420px] w-full max-w-[460px] overflow-hidden bg-gray-200 shadow-[0_28px_70px_rgba(44,24,16,0.10)] sm:h-[560px] lg:h-[620px]"
               style={{
                 clipPath: 'url(#meetMaryBlob)',
               }}
@@ -307,7 +307,7 @@ export default function Page() {
             <div className="text-xs uppercase tracking-widest text-[#C4848A] font-medium mb-4">
               Meet Mary
             </div>
-            <h2 className="font-serif text-5xl font-bold text-[#1A1A1A] mb-8">
+            <h2 className="mb-6 font-serif text-[38px] font-bold leading-tight text-[#1A1A1A] sm:text-5xl lg:mb-8">
               Beauty that feels like a friend, not a clinic.
             </h2>
 
@@ -335,9 +335,9 @@ export default function Page() {
       </section>
 
       {/* Section 6: Pull Quote */}
-      <section className="w-full bg-[#FDF0F0] py-32">
-        <div className="mx-auto max-w-4xl px-6 text-center lg:px-10">
-          <p className="font-serif italic text-5xl leading-tight text-[#1A1A1A] mb-6">
+      <section className="w-full bg-[#FDF0F0] py-16 lg:py-32">
+        <div className="mx-auto max-w-4xl px-4 text-center sm:px-6 lg:px-10">
+          <p className="mb-6 font-serif text-[34px] italic leading-tight text-[#1A1A1A] sm:text-5xl">
             "Beauty is an inside feeling — it's about feeling your absolute best."
           </p>
           <p className="text-xs uppercase tracking-widest text-[#C4848A] font-medium">
@@ -347,14 +347,14 @@ export default function Page() {
       </section>
 
       {/* Section 7: Popular Treatments */}
-      <section className="w-full bg-white py-32">
-        <div className="mx-auto grid max-w-[1440px] grid-cols-2 gap-20 px-6 lg:px-10">
+      <section className="w-full bg-white py-16 lg:py-32">
+        <div className="mx-auto grid max-w-[1440px] grid-cols-1 gap-10 px-4 sm:px-6 lg:grid-cols-2 lg:gap-20 lg:px-10">
           {/* Left */}
           <div>
             <div className="text-xs uppercase tracking-widest text-[#C4848A] font-medium mb-4">
               Popular Treatments
             </div>
-            <h2 className="font-serif text-5xl font-bold text-[#1A1A1A] mb-6">
+            <h2 className="mb-5 font-serif text-[38px] font-bold leading-tight text-[#1A1A1A] sm:text-5xl lg:mb-6">
               Choose your kind of glow.
             </h2>
             <p className="text-base leading-8 text-[#5A5A5A]">
@@ -395,26 +395,26 @@ export default function Page() {
       </section>
 
       {/* Section 8: Testimonials */}
-      <section className="w-full bg-[#FDF0F0] py-32">
-        <div className="mx-auto max-w-[1440px] px-6 lg:px-10">
+      <section className="w-full bg-[#FDF0F0] py-16 lg:py-32">
+        <div className="mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-10">
           <div className="text-xs uppercase tracking-widest text-[#C4848A] font-medium mb-4">
             Client Love
           </div>
-          <div className="flex items-end gap-6 mb-16">
-            <h2 className="font-serif text-[60px] leading-[1.05] font-bold text-[#1A1A1A]">
+          <div className="mb-10 flex flex-col gap-3 sm:mb-16 lg:flex-row lg:items-end lg:gap-6">
+            <h2 className="font-serif text-[38px] font-bold leading-[1.05] text-[#1A1A1A] sm:text-5xl lg:text-[60px]">
               The afterglow, in their words.
             </h2>
             <p className="text-sm text-[#5A5A5A] mb-3 pb-1">185 Google reviews ★★★★★</p>
           </div>
 
           {/* Top 3 reviews */}
-          <div className="grid grid-cols-3 gap-8 mb-8">
+          <div className="mb-6 grid grid-cols-1 gap-5 md:grid-cols-3 lg:mb-8 lg:gap-8">
             {[
               { text: "Mary does such a fabulous job taking care of my skin! I recently started going to her and can already notice an improvement!", author: 'Annie Shanahan' },
               { text: "I so look forward to my appointments with Mary Jesse! It's all about relaxation and hair and skin health!", author: 'Aubree' },
               { text: "I absolutely love my Japanese Hair Treatment! Mary Jesse is great and has so much knowledge to share about how to care for your hair. 5 plus stars. Everyone should treat themselves to this wonderful experience.", author: 'Gabrielle' },
             ].map((review, idx) => (
-              <div key={idx} className="bg-white rounded-2xl p-10">
+              <div key={idx} className="rounded-2xl bg-white p-6 lg:p-10">
                 <div className="flex gap-1 mb-6">
                   {[...Array(5)].map((_, i) => (
                     <span key={i} className="text-[#C4848A] text-lg">★</span>
@@ -431,12 +431,12 @@ export default function Page() {
           </div>
 
           {/* Additional 2 reviews */}
-          <div className="grid grid-cols-2 gap-8 max-w-3xl mx-auto">
+          <div className="mx-auto grid max-w-3xl grid-cols-1 gap-5 sm:grid-cols-2 lg:gap-8">
             {[
               { text: "I feel so good after my session with Mary. She's such a wonderful lady.", author: 'Irma Thrashed' },
               { text: "Mary is attentive and great at what she does! Always an amazing facial.", author: 'Rachelle' },
             ].map((review, idx) => (
-              <div key={idx} className="bg-white rounded-2xl p-8">
+              <div key={idx} className="rounded-2xl bg-white p-6 lg:p-8">
                 <div className="flex gap-1 mb-4">
                   {[...Array(5)].map((_, i) => (
                     <span key={i} className="text-[#C4848A] text-base">★</span>
@@ -455,13 +455,13 @@ export default function Page() {
       </section>
 
       {/* Section 9: Gallery */}
-      <section id="gallery" className="w-full bg-white py-32">
-        <div className="mx-auto max-w-[1440px] px-6 lg:px-10">
-          <div className="mb-16">
+      <section id="gallery" className="w-full bg-white py-16 lg:py-32">
+        <div className="mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-10">
+          <div className="mb-10 lg:mb-16">
             <div className="text-xs uppercase tracking-widest text-[#C4848A] font-medium mb-4">
               The Studio
             </div>
-            <h2 className="font-serif text-5xl font-bold text-[#1A1A1A] mb-6">
+            <h2 className="mb-5 font-serif text-[38px] font-bold leading-tight text-[#1A1A1A] sm:text-5xl lg:mb-6">
               A studio with a softer tempo.
             </h2>
             <p className="text-base leading-8 text-[#5A5A5A] max-w-md">
@@ -478,7 +478,7 @@ export default function Page() {
               loop
               playsInline
               poster="/studio.jpeg"
-              className="rounded-2xl object-contain w-auto"
+              className="h-auto w-full rounded-2xl object-contain sm:w-auto"
               style={{ maxHeight: '600px' }}
             >
               <source src="/studio.mp4" type="video/mp4" />
@@ -505,14 +505,14 @@ export default function Page() {
       </section>
 
       {/* Section 10: CTA / Contact */}
-      <section id="contact" className="w-full bg-[#FDF0F0] py-32">
-        <div className="mx-auto grid max-w-[1440px] grid-cols-1 gap-16 px-6 lg:px-10 md:grid-cols-2 items-center">
+      <section id="contact" className="w-full bg-[#FDF0F0] py-16 lg:py-32">
+        <div className="mx-auto grid max-w-[1440px] grid-cols-1 gap-10 px-4 sm:px-6 lg:gap-16 lg:px-10 md:grid-cols-2 items-center">
           {/* Left */}
           <div>
             <div className="text-xs uppercase tracking-widest text-[#C4848A] font-medium mb-4">
               Get Started
             </div>
-            <h2 className="font-serif text-5xl font-bold text-[#1A1A1A] mb-8">
+            <h2 className="mb-6 font-serif text-[38px] font-bold leading-tight text-[#1A1A1A] sm:text-5xl lg:mb-8">
               Ready when you are.
             </h2>
             <p className="text-base leading-8 text-[#5A5A5A] mb-10">
@@ -536,7 +536,7 @@ export default function Page() {
             </a>
             <a href="mailto:MaryJesseandCo@gmail.com" className="flex items-center gap-4 text-base text-[#1A1A1A] font-medium hover:text-[#C4848A] transition">
               <span className="h-5 w-5 flex-shrink-0 text-[#C4848A] text-sm font-bold">@</span>
-              <span>MaryJesseandCo@gmail.com</span>
+              <span className="break-all">MaryJesseandCo@gmail.com</span>
             </a>
             <a href="https://maryjesse.glossgenius.com/booking-flow" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 text-base text-[#C4848A] font-medium hover:underline">
               <CalendarCheck className="h-5 w-5 flex-shrink-0 text-[#C4848A]" strokeWidth={1.8} />
@@ -564,7 +564,7 @@ export default function Page() {
 
       {/* Footer */}
       <footer className="w-full bg-[#FFF9F5]" style={{ borderTop: '1px solid #E8C7D0' }}>
-        <div className="mx-auto max-w-[1440px] px-6 py-16 lg:px-10">
+        <div className="mx-auto max-w-[1440px] px-4 py-12 sm:px-6 lg:px-10 lg:py-16">
           <div className="grid grid-cols-1 gap-12 md:grid-cols-4">
             {/* Brand column */}
             <div className="md:col-span-2">
