@@ -3,7 +3,12 @@
     "allow": [
       "Bash(npx tsc *)",
       "Bash(git init *)",
-      "Bash(git remote *)"
+      "Bash(git remote *)",
+      "Bash(git rm *)",
+      "Bash(git add *)",
+      "Bash(git commit -m ' *)",
+      "Read(//Users/gaurav/.claude/**)",
+      "Bash(git clone *)"
     ]
   }
 }

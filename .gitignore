@@ -15,3 +15,16 @@ node_modules
 .DS_Store
 tsconfig.tsbuildinfo
 .claude/
+# Raw phone source videos + intermediate/unused assets (not used by site)
+public/*.MOV
+public/*.mov
+public/prod.PNG
+public/prod-9x16.png
+public/prod-crop.png
+public/herotest.jpeg
+public/studio-neon copy.jpeg
+public/studio-products.mp4
+public/studio-sign.mp4
+public/studio-exterior.mp4
+public/studio.mp4
+.backups/
