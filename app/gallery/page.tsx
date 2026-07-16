@@ -7,9 +7,9 @@ import { BOOK_URL, GALLERY_CLIPS } from '@/lib/site-data';
 const PHOTOS = [
   { src: '/facial-treatment.jpg', label: 'In Treatment' },
   { src: '/headspa.jpeg', label: 'Head Spa Ritual' },
-  { src: '/led.jpeg', label: 'Light Therapy' },
-  { src: '/scalp.jpeg', label: 'Scalp Analysis' },
-  { src: '/facial.jpeg', label: 'Custom Facial' },
+  { src: '/led.jpeg', label: 'Scalp Analysis' },
+  { src: '/scalp.jpeg', label: 'Custom Facial' },
+  { src: null, label: 'LED Light Therapy', placeholder: true },
   { src: '/IMG_6267.jpeg', label: 'The Details' },
 ];
 
@@ -82,14 +82,23 @@ export default function GalleryPage() {
           <div className="grid grid-cols-2 gap-4 md:grid-cols-3">
             {PHOTOS.map((photo, idx) => (
               <div
-                key={photo.src}
+                key={photo.src ?? photo.label}
                 className="reveal group relative aspect-[3/4] overflow-hidden bg-[#DAD3C4]"
                 style={{ transitionDelay: `${(idx % 3) * 90}ms` }}
               >
-                <img src={photo.src} alt={photo.label} className="group-hover-zoom h-full w-full object-cover" />
-                <div className="pointer-events-none absolute inset-x-0 bottom-0 bg-gradient-to-t from-[#3E3833]/65 to-transparent p-4 pt-10">
-                  <p className="text-[10px] uppercase tracking-[0.18em] text-[#FAF6EF]">{photo.label}</p>
-                </div>
+                {photo.src ? (
+                  <>
+                    <img src={photo.src} alt={photo.label} className="group-hover-zoom h-full w-full object-cover" />
+                    <div className="pointer-events-none absolute inset-x-0 bottom-0 bg-gradient-to-t from-[#3E3833]/65 to-transparent p-4 pt-10">
+                      <p className="text-[10px] uppercase tracking-[0.18em] text-[#FAF6EF]">{photo.label}</p>
+                    </div>
+                  </>
+                ) : (
+                  <div className="flex h-full w-full flex-col items-center justify-center gap-2 px-6 text-center">
+                    <span className="text-[10px] uppercase tracking-[0.2em] text-[#8A7F72]">Photo Coming Soon</span>
+                    <span className="font-serif text-[18px] font-light text-[#3E3833]">{photo.label}</span>
+                  </div>
+                )}
               </div>
             ))}
           </div>
