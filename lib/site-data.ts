@@ -20,8 +20,27 @@ export const SIGNATURE_INCLUDES = [
 export const SIGNATURE_PRICE = '$85';
 
 export const HEADSPA = [
-  { name: 'Japanese Head Spa', duration: '60 min', price: '$150' },
-  { name: 'Japanese Head Spa', duration: '90 min', price: '$200' },
+  { name: 'The Crown', duration: '60 min', price: '$150' },
+  { name: 'The Royal Crown', duration: '90 min', price: '$200', note: 'Everything in The Crown, plus extended massage, eye treatment, and lip treatment.' },
+];
+
+export const HEADSPA_INCLUDES = [
+  'Personalized scalp analysis',
+  'Essential oil welcome ritual',
+  'Deep scalp cleanse + exfoliation',
+  'Detoxifying scalp treatment',
+  'Nourishing shampoo + conditioning mask',
+  'Steam therapy for deep hydration',
+  'Hair growth serum + scalp elixir',
+  'Signature facial',
+  'Heated eye mask',
+  'Relaxation massage with specialty scalp tools',
+];
+
+export const HEADSPA_90MIN_EXTRAS = [
+  'Extended massage',
+  'Hydrating lip treatment',
+  'Brightening eye treatment',
 ];
 
 export const TIERS = [
@@ -43,8 +62,8 @@ export const BROWS = [
 ];
 
 export const LED_THERAPY = [
-  { name: 'LED Therapy', duration: '30 min', price: '$50' },
-  { name: 'LED Therapy', duration: 'Series of 3', price: '$135' },
+  { name: 'LED Therapy', duration: '30 min', price: '[CONFIRM: pricing]' },
+  { name: 'LED Therapy', duration: 'Series of 3', price: '[CONFIRM: pricing]' },
 ];
 
 export const REFLEXOLOGY = [

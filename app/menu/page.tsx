@@ -6,6 +6,8 @@ import {
   SIGNATURE_INCLUDES,
   SIGNATURE_PRICE,
   HEADSPA,
+  HEADSPA_INCLUDES,
+  HEADSPA_90MIN_EXTRAS,
   TIERS,
   TEEN_FACIAL_PRICE,
   BROWS,
@@ -34,18 +36,59 @@ export default function MenuPage() {
       {/* Japanese Head Spa — signature service, listed first */}
       <section className="w-full bg-[#6E4A50] py-20 lg:py-24">
         <div className="reveal mx-auto max-w-[1500px] px-6 lg:px-12">
-          <span className="mb-4 block text-[11px] uppercase tracking-[0.24em] text-[#D9BEC0]">Signature Service</span>
+          <span className="mb-4 block text-[11px] uppercase tracking-[0.24em] text-[#D9BEC0]">👑 The Crown</span>
           <h2 className="max-w-2xl font-serif text-[32px] font-light leading-[1.15] text-[#F3E7E4] lg:text-[44px]">
             japanese head spa.
           </h2>
-          <p className="mt-5 max-w-xl text-[14px] leading-8 text-[#E4D2D0]">
-            A facial for your scalp — deep-cleansing, circulation-boosting, and deeply relaxing. Supports healthy hair growth and melts away tension.
+          <p className="mt-5 max-w-xl text-[15px] leading-8 text-[#F3E7E4]">
+            A facial for your scalp—designed to deeply cleanse, nourish, and restore the foundation of healthy hair while melting away stress and tension.
           </p>
-          <div className="mt-10 grid grid-cols-1 gap-px bg-[#5A3B41] sm:grid-cols-2">
+          <p className="mt-3 max-w-xl text-[13px] leading-7 text-[#D9BEC0]">
+            Your customized scalp wellness experience designed to deeply cleanse, nourish, and restore your scalp while creating healthier, more beautiful hair.
+          </p>
+          <p className="mt-6 font-serif text-[16px] italic text-[#E4D2D0]">
+            &ldquo;Because your crown deserves the same care as your skin.&rdquo;
+          </p>
+
+          {/* Every Head Spa Includes */}
+          <div className="mt-12 grid grid-cols-1 gap-x-10 gap-y-8 sm:grid-cols-2">
+            <div>
+              <p className="mb-5 text-[11px] uppercase tracking-[0.2em] text-[#D9BEC0]">Every Head Spa Includes</p>
+              <ul className="grid grid-cols-1 gap-3">
+                {HEADSPA_INCLUDES.map((item, idx) => (
+                  <li key={idx} className="flex items-start gap-3 text-[13px] leading-7 text-[#E4D2D0]">
+                    <span className="mt-px text-[#F3E7E4]">—</span>
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div>
+              <p className="mb-5 text-[11px] uppercase tracking-[0.2em] text-[#D9BEC0]">The 90 Min Experience Also Includes</p>
+              <ul className="space-y-3">
+                {HEADSPA_90MIN_EXTRAS.map((item, idx) => (
+                  <li key={idx} className="flex items-start gap-3 text-[13px] leading-7 text-[#E4D2D0]">
+                    <span className="mt-px text-[#F3E7E4]">—</span>
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+
+          <div className="mt-12 grid grid-cols-1 gap-px bg-[#5A3B41] sm:grid-cols-2">
             {HEADSPA.map((item, idx) => (
-              <div key={idx} className="flex items-center justify-between bg-[#6E4A50] px-8 py-7">
-                <span className="text-[15px] text-[#F3E7E4]">{item.duration}</span>
-                <span className="font-serif text-[26px] font-light text-[#F3E7E4]">{item.price}</span>
+              <div key={idx} className="flex flex-col justify-between bg-[#6E4A50] px-8 py-7">
+                <div className="flex items-center justify-between gap-4">
+                  <div>
+                    <p className="text-[13px] uppercase tracking-[0.14em] text-[#F3E7E4]">👑 {item.name}</p>
+                    <p className="mt-1 text-[13px] text-[#D9BEC0]">{item.duration}</p>
+                  </div>
+                  <span className="font-serif text-[26px] font-light text-[#F3E7E4]">{item.price}</span>
+                </div>
+                {item.note && (
+                  <p className="mt-4 text-[12px] leading-6 text-[#D9BEC0]">{item.note}</p>
+                )}
               </div>
             ))}
           </div>
@@ -70,6 +113,9 @@ export default function MenuPage() {
                 <h2 className="font-serif text-[36px] font-light text-[#EFE9DE]">the signature</h2>
                 <span className="font-serif text-[22px] font-light text-[#C9BFAE]">{SIGNATURE_PRICE}</span>
               </div>
+              <p className="mt-3 font-serif text-[15px] italic text-[#C9BFAE]">
+                &ldquo;Healthy skin starts with a strong foundation.&rdquo;
+              </p>
               <p className="mt-5 max-w-sm text-[14px] leading-8 text-[#C9BFAE]">
                 Your customized facial experience designed to cleanse, nourish, and restore your skin.
               </p>
