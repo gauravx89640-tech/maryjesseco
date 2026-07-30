@@ -9,8 +9,11 @@ const PHOTOS = [
   { src: '/headspa.jpeg', label: 'Head Spa Ritual' },
   { src: '/led.jpeg', label: 'Scalp Analysis' },
   { src: '/scalp.jpeg', label: 'Custom Facial' },
-  { src: null, label: 'LED Light Therapy', placeholder: true },
+  { src: '/led-therapy.jpg', label: 'LED Light Therapy' },
   { src: '/IMG_6267.jpeg', label: 'The Details' },
+  // Awaiting Rhonda Allison media from Mary — set `src` and drop `placeholder` when the files land.
+  { src: null, label: 'Rhonda Allison Skincare', placeholder: true },
+  { src: null, label: 'Rhonda Allison Skincare', placeholder: true },
 ];
 
 export default function GalleryPage() {
@@ -26,7 +29,7 @@ export default function GalleryPage() {
             a studio with a softer tempo.
           </h1>
           <p className="mt-6 max-w-xl text-[15px] leading-8 text-[#5E564D]">
-            Warm light, quiet mornings, and treatment spaces that make every appointment feel like a ritual. Step inside Mary Jesse &amp; Co.
+            Warm light, quiet mornings, and treatment spaces that make every appointment feel like a ritual. Step inside Mary Jesse Skin + Scalp Studio.
           </p>
         </div>
       </section>
@@ -62,7 +65,7 @@ export default function GalleryPage() {
         <div className="reveal group relative h-[340px] w-full overflow-hidden md:h-[520px]">
           <img
             src="/studio-neon.jpeg"
-            alt="Mary Jesse & Co. treatment room with neon sign"
+            alt="Mary Jesse Skin + Scalp Studio treatment room with neon sign"
             className="group-hover-zoom absolute inset-0 h-full w-full object-cover object-center"
           />
           <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#3E3833]/50 via-transparent to-transparent"></div>
@@ -82,7 +85,7 @@ export default function GalleryPage() {
           <div className="grid grid-cols-2 gap-4 md:grid-cols-3">
             {PHOTOS.map((photo, idx) => (
               <div
-                key={photo.src ?? photo.label}
+                key={photo.src ?? `${photo.label}-${idx}`}
                 className="reveal group relative aspect-[3/4] overflow-hidden bg-[#DAD3C4]"
                 style={{ transitionDelay: `${(idx % 3) * 90}ms` }}
               >

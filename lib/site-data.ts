@@ -63,7 +63,7 @@ export const BROWS = [
 
 export const LED_THERAPY = [
   { name: 'LED Therapy', duration: '30 min', price: '$50' },
-  { name: 'LED Therapy', duration: 'Series of 3', price: '$135' },
+  { name: 'LED Therapy', duration: 'Series of 3', price: '$120' },
 ];
 
 export const REFLEXOLOGY = [
