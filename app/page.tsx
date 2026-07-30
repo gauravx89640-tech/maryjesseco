@@ -137,7 +137,7 @@ export default function HomePage() {
         <Link href="/gallery" className="group relative block h-[340px] w-full overflow-hidden md:h-[460px]">
           <img
             src="/studio-neon.jpeg"
-            alt="Mary Jesse & Co. treatment room with neon sign"
+            alt="Mary Jesse Skin + Scalp Studio treatment room with neon sign"
             className="group-hover-zoom absolute inset-0 h-full w-full object-cover object-center"
           />
           <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#3E3833]/55 via-transparent to-transparent"></div>

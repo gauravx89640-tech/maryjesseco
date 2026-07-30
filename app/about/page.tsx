@@ -17,7 +17,7 @@ export default function AboutPage() {
             beauty that feels like<br />a friend, not a clinic.
           </h1>
           <p className="mt-8 max-w-md text-[15px] leading-8 text-[#5E564D]">
-            Mary Jesse &amp; Co. is a boutique esthetics studio in Arvada offering customized facials and luxury Japanese Head Spa treatments focused on total skin and scalp health.
+            Mary Jesse Skin + Scalp Studio is a boutique esthetics studio in Arvada offering customized facials and luxury Japanese Head Spa treatments focused on total skin and scalp health.
           </p>
         </div>
         <div className="relative order-1 min-h-[460px] overflow-hidden bg-[#1a1817] lg:order-2">
@@ -40,7 +40,7 @@ export default function AboutPage() {
               Her approach is results-minded but never clinical. There&apos;s no upselling and no rushing — just thoughtful, one-on-one care designed around how your skin actually feels: calmer, clearer, healthier.
             </p>
             <p className="font-serif text-[24px] font-light italic text-[#3E3833]">
-              &ldquo;At Mary Jesse &amp; Co., clients enter as a guest and leave as a friend.&rdquo;
+              &ldquo;At Mary Jesse Skin + Scalp Studio, clients enter as a guest and leave as a friend.&rdquo;
             </p>
           </div>
         </div>

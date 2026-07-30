@@ -18,7 +18,7 @@ export default function ContactPage() {
     const form = e.currentTarget;
     const data = new FormData(form);
     data.append('access_key', WEB3FORMS_ACCESS_KEY);
-    data.append('subject', 'New inquiry from Mary Jesse & Co. website');
+    data.append('subject', 'New inquiry from Mary Jesse Skin + Scalp Studio website');
     try {
       const res = await fetch('https://api.web3forms.com/submit', {
         method: 'POST',
@@ -113,7 +113,7 @@ export default function ContactPage() {
               </div>
             </div>
             <p className="max-w-sm pt-2 text-[12px] leading-5 text-[#7A7266]">
-              Please note that cancellations within 24 hours may result in a 50% service fee, and no-shows may result in a 100% service fee. To cancel or reschedule, please notify Mary Jesse &amp; Co. at 303.596.5857.
+              Please note that cancellations within 24 hours may result in a 50% service fee, and no-shows may result in a 100% service fee. To cancel or reschedule, please notify Mary Jesse Skin + Scalp Studio at 303.596.5857.
             </p>
           </div>
         </div>
@@ -129,7 +129,7 @@ export default function ContactPage() {
             </div>
             <div className="h-[420px] overflow-hidden border border-[#C0B7A6]">
               <iframe
-                title="Mary Jesse & Co. location map"
+                title="Mary Jesse Skin + Scalp Studio location map"
                 src="https://www.google.com/maps?q=7430+W+88th+Ave+Studio+207,+Arvada,+CO+80021&output=embed"
                 width="100%"
                 height="100%"
