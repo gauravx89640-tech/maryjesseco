@@ -9,14 +9,13 @@ type Photo = {
   label: string;
   /** Wide or transparent art that must not be cropped — letterboxed on the tile instead. */
   contain?: boolean;
-  /** Spans two columns on desktop, so landscape art gets a landscape tile. */
-  wide?: boolean;
   /** `src: null` renders a "Photo Coming Soon" tile — used while awaiting client media. */
   placeholder?: boolean;
 };
 
-// 8 tiles, but the product lineup spans 2 columns on desktop = 9 cells = a clean 3x3.
-// On mobile (2 cols) it sits as a normal tile, so that grid stays even too.
+// 8 equal tiles. Every tile stays the same size on purpose: this grid is about Mary's
+// work, so the supplier product shot sits as a peer, never as the headline. That leaves
+// one empty cell in the last desktop row — deliberate, and better than the alternatives.
 const PHOTOS: Photo[] = [
   { src: '/facial-treatment.jpg', label: 'In Treatment' },
   { src: '/headspa.jpeg', label: 'Head Spa Ritual' },
@@ -26,7 +25,7 @@ const PHOTOS: Photo[] = [
   { src: '/led-therapy.jpg', label: 'LED Light Therapy' },
   { src: '/IMG_6267.jpeg', label: 'The Details' },
   // Wide transparent product lineup — contained so the whole range stays visible.
-  { src: '/PY_Family_Photo.png', label: 'Rhonda Allison Pro Youth', contain: true, wide: true },
+  { src: '/PY_Family_Photo.png', label: 'Rhonda Allison Pro Youth', contain: true },
 ];
 
 export default function GalleryPage() {
@@ -99,9 +98,7 @@ export default function GalleryPage() {
             {PHOTOS.map((photo, idx) => (
               <div
                 key={photo.src ?? `${photo.label}-${idx}`}
-                className={`reveal group relative aspect-[3/4] overflow-hidden bg-[#DAD3C4]${
-                  photo.wide ? ' md:col-span-2 md:aspect-auto' : ''
-                }`}
+                className="reveal group relative aspect-[3/4] overflow-hidden bg-[#DAD3C4]"
                 style={{ transitionDelay: `${(idx % 3) * 90}ms` }}
               >
                 {photo.src && photo.contain ? (
