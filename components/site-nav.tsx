@@ -18,11 +18,13 @@ export default function SiteNav() {
   return (
     <nav className="sticky top-0 z-50 w-full border-b border-[#E5DFD3] bg-[#FAF6EF]/90 backdrop-blur-md">
       <div className="mx-auto flex max-w-[1500px] items-center justify-between px-6 py-5 lg:px-12">
-        <Link
-          href="/"
-          className="font-serif text-[17px] font-medium leading-tight tracking-[0.04em] text-[#3E3833] sm:text-xl lg:text-[26px]"
-        >
-          mary jesse skin&nbsp;+&nbsp;scalp studio
+        <Link href="/" className="text-center font-serif font-medium text-[#3E3833]">
+          <span className="block text-[19px] leading-[1.05] tracking-[0.04em] sm:text-[22px] lg:text-[26px]">
+            mary jesse
+          </span>
+          <span className="mt-0.5 block font-sans text-[10px] font-light tracking-[0.22em] text-[#6E4A50] sm:text-[11px] lg:text-[12px]">
+            skin&nbsp;+&nbsp;scalp studio
+          </span>
         </Link>
         <div className="hidden gap-8 items-center text-[11px] uppercase tracking-[0.2em] text-[#6E655C] lg:flex">
           {LINKS.map((l) => (

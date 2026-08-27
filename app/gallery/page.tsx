@@ -4,15 +4,26 @@ import Link from 'next/link';
 import { useReveal } from '@/components/use-reveal';
 import { BOOK_URL, GALLERY_CLIPS } from '@/lib/site-data';
 
-const PHOTOS = [
+type Photo = {
+  src: string | null;
+  label: string;
+  /** Wide or transparent art that must not be cropped — letterboxed on the tile instead. */
+  contain?: boolean;
+  placeholder?: boolean;
+};
+
+// 9 tiles = a clean 3x3 on desktop, no trailing gap.
+const PHOTOS: Photo[] = [
   { src: '/facial-treatment.jpg', label: 'In Treatment' },
   { src: '/headspa.jpeg', label: 'Head Spa Ritual' },
   { src: '/led.jpeg', label: 'Scalp Analysis' },
   { src: '/scalp.jpeg', label: 'Custom Facial' },
+  { src: '/dermaplane.jpeg', label: 'Dermaplane' },
   { src: '/led-therapy.jpg', label: 'LED Light Therapy' },
   { src: '/IMG_6267.jpeg', label: 'The Details' },
-  // Awaiting Rhonda Allison media from Mary — set `src` and drop `placeholder` when the files land.
-  { src: null, label: 'Rhonda Allison Skincare', placeholder: true },
+  // Wide transparent product lineup — contained so the whole range stays visible.
+  { src: '/PY_Family_Photo.png', label: 'Rhonda Allison Pro Youth', contain: true },
+  // Still awaiting the second Rhonda Allison still/video from Mary.
   { src: null, label: 'Rhonda Allison Skincare', placeholder: true },
 ];
 
@@ -89,7 +100,18 @@ export default function GalleryPage() {
                 className="reveal group relative aspect-[3/4] overflow-hidden bg-[#DAD3C4]"
                 style={{ transitionDelay: `${(idx % 3) * 90}ms` }}
               >
-                {photo.src ? (
+                {photo.src && photo.contain ? (
+                  <>
+                    <img
+                      src={photo.src}
+                      alt={photo.label}
+                      className="h-full w-full object-contain p-6 transition-transform duration-700 group-hover:scale-[1.03]"
+                    />
+                    <div className="pointer-events-none absolute inset-x-0 bottom-0 p-4">
+                      <p className="text-[10px] uppercase tracking-[0.18em] text-[#5E564D]">{photo.label}</p>
+                    </div>
+                  </>
+                ) : photo.src ? (
                   <>
                     <img src={photo.src} alt={photo.label} className="group-hover-zoom h-full w-full object-cover" />
                     <div className="pointer-events-none absolute inset-x-0 bottom-0 bg-gradient-to-t from-[#3E3833]/65 to-transparent p-4 pt-10">

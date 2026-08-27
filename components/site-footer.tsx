@@ -7,7 +7,12 @@ export default function SiteFooter() {
       <div className="mx-auto max-w-[1500px] px-6 py-16 lg:px-12">
         <div className="grid grid-cols-1 gap-12 md:grid-cols-4">
           <div className="md:col-span-2">
-            <h3 className="font-serif text-[22px] font-light leading-tight tracking-[0.04em] sm:text-[26px]">mary jesse skin&nbsp;+&nbsp;scalp studio</h3>
+            <h3 className="font-serif text-[24px] font-light leading-[1.05] tracking-[0.04em] sm:text-[28px]">
+              mary jesse
+              <span className="mt-1 block font-sans text-[11px] font-light tracking-[0.22em] text-[#C9BFAE]">
+                skin&nbsp;+&nbsp;scalp studio
+              </span>
+            </h3>
             <p className="mt-1 text-[11px] uppercase tracking-[0.22em] text-[#C9BFAE]">From Zen to Corrected Skin</p>
             <p className="mt-1 text-[11px] text-[#9C9184]">Esthetician · Hairstylist · Scalp Specialist</p>
             <div className="mt-6 space-y-2 text-[14px] text-[#DAD3C4]">
