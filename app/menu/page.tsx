@@ -8,6 +8,7 @@ import {
   HEADSPA,
   HEADSPA_INCLUDES,
   HEADSPA_90MIN_EXTRAS,
+  FOOT_SPA,
   TIERS,
   TEEN_FACIAL_PRICE,
   BROWS,
@@ -31,6 +32,7 @@ const C = {
   brows: '#EFE9DE', // soft sand
   led: '#DAD3C4', // warm taupe
   reflexology: '#E4D2D0', // dusty rose tint
+  footSpa: '#4A403B', // charcoal brown — third dark anchor, sibling to The Crown
   closer: '#4A403B', // charcoal brown — bookends the black Foundation
 };
 
@@ -244,7 +246,36 @@ export default function MenuPage() {
             </div>
           </div>
 
-          {/* ── 5. Brows & Waxing ─────────────────────────────────────────── */}
+          {/* ── 5. FOOT SPA — Head Spa techniques for the feet ─────────────── */}
+          {/* No Book CTA on purpose: the service starts when Mary returns in October. */}
+          <div className="reveal mt-6 px-10 py-14 lg:px-14" style={{ backgroundColor: C.footSpa }}>
+            <div className="max-w-3xl">
+              <span className="mb-4 block text-[11px] uppercase tracking-[0.2em] text-[#C9BFAE]">
+                New · Starting October
+              </span>
+              <h2 className="font-serif text-[36px] font-light text-[#EFE9DE]">foot spa.</h2>
+              <p className="mt-3 font-serif text-[15px] italic text-[#C9BFAE]">
+                &ldquo;{FOOT_SPA.tagline}&rdquo;
+              </p>
+              <p className="mt-5 text-[14px] leading-8 text-[#EFE9DE]">{FOOT_SPA.description}</p>
+
+              <div className="mt-8 border-t border-[#EFE9DE]/20 pt-4">
+                <div className="flex items-baseline justify-between gap-4">
+                  <div>
+                    <p className="text-[13px] uppercase tracking-[0.14em] text-[#EFE9DE]">{FOOT_SPA.name}</p>
+                    <p className="mt-1 text-[13px] text-[#C9BFAE]">{FOOT_SPA.duration}</p>
+                  </div>
+                  <span className="font-serif text-[26px] font-light text-[#EFE9DE]">{FOOT_SPA.price}</span>
+                </div>
+              </div>
+
+              <p className="mt-7 text-[12px] uppercase tracking-[0.16em] text-[#C9BFAE]">
+                Booking opens when Mary returns in October.
+              </p>
+            </div>
+          </div>
+
+          {/* ── 6. Brows & Waxing ─────────────────────────────────────────── */}
           <CategoryBlock eyebrow="Brows & Waxing" heading="shape & define." bg={C.brows}>
             <div className="grid grid-cols-1 gap-x-12 sm:grid-cols-2">
               {BROWS.map((item) => (

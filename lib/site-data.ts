@@ -37,6 +37,20 @@ export const HEADSPA_INCLUDES = [
   'Relaxation massage with specialty scalp tools',
 ];
 
+/**
+ * Foot Spa — Head Spa techniques applied to the feet. Mary's copy, verbatim.
+ * NOT bookable until she returns from knee surgery in October 2026, so the block
+ * shows a "starting October" note instead of a Book button. Swap in the CTA then.
+ */
+export const FOOT_SPA = {
+  name: 'Foot Spa',
+  duration: '30 minutes',
+  price: '$60',
+  tagline: 'Because your feet deserve a facial too.',
+  description:
+    'Give your hardworking feet a little love. This 30-minute restorative treatment blends soothing Foot Reflexology with warm towels, exfoliation, intentional massage, and sensory spa techniques designed to melt away tension and leave tired feet feeling refreshed, relaxed, and renewed.',
+};
+
 export const HEADSPA_90MIN_EXTRAS = [
   'Extended massage',
   'Hydrating lip treatment',
