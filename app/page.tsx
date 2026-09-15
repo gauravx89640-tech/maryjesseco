@@ -47,6 +47,15 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Promise line — Mary's phrase, verbatim. The "+" echoes "Skin + Scalp Studio". */}
+      <section className="w-full border-y border-[#E5DFD3] bg-[#EFE9DE] py-12 lg:py-16">
+        <div className="reveal mx-auto max-w-4xl px-6 text-center lg:px-10">
+          <p className="font-serif text-[26px] font-light italic leading-snug text-[#3E3833] lg:text-[36px]">
+            really good results <span className="not-italic text-[#A97D82]">+</span> ridiculously good feels
+          </p>
+        </div>
+      </section>
+
       {/* Menu teaser — rose band */}
       <section className="relative w-full overflow-hidden bg-[#6E4A50] py-24">
         <div className="reveal mx-auto max-w-3xl px-6 text-center lg:px-10">
