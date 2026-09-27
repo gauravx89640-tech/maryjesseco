@@ -27,7 +27,7 @@ const C = {
   foundationPanel: '#EFE9DE', // its includes panel (soft sand)
   crownDark: '#6E4A50', // Japanese Head Spa — mauve, same treatment
   crownPanel: '#F3E7E4', // its includes panel (pale rose)
-  tierRamp: ['#FAF6EF', '#EFE9DE', '#E5DFD3', '#DAD3C4'], // add-ons: cream → taupe
+  tierRamp: ['#FAF6EF', '#EFE9DE', '#E5DFD3', '#DAD3C4'], // elevations: cream → taupe
   teen: '#F3E7E4', // pale rose
   brows: '#EFE9DE', // soft sand
   led: '#DAD3C4', // warm taupe
@@ -80,7 +80,7 @@ export default function MenuPage() {
             choose your experience.
           </h1>
           <p className="mt-6 max-w-xl text-[15px] leading-8 text-[#5E564D]">
-            Start with The Signature — your fully customized facial — then choose the add-on that matches your skin
+            Start with The Signature — your fully customized facial — then choose the elevation that matches your skin
             goals. Build the experience that&apos;s right for you.
           </p>
         </div>
@@ -127,9 +127,9 @@ export default function MenuPage() {
             </div>
           </div>
 
-          {/* ── 2. Add-on tiers — cream → taupe ramp ───────────────────────── */}
+          {/* ── 2. Elevation tiers — cream → taupe ramp ───────────────────────── */}
           <p className="reveal mb-6 mt-10 text-center font-serif text-[22px] font-light italic text-[#A97D82]">
-            then choose your add-on.
+            then choose your elevation.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
             {TIERS.map((tier, idx) => (
@@ -246,14 +246,10 @@ export default function MenuPage() {
             </div>
           </div>
 
-          {/* ── 5. FOOT SPA — Head Spa techniques for the feet ─────────────── */}
-          {/* No Book CTA on purpose: the service starts when Mary returns in October. */}
+          {/* ── 5. JAPANESE FOOT SPA — Head Spa techniques for the feet ────── */}
           <div className="reveal mt-6 px-10 py-14 lg:px-14" style={{ backgroundColor: C.footSpa }}>
             <div className="max-w-3xl">
-              <span className="mb-4 block text-[11px] uppercase tracking-[0.2em] text-[#C9BFAE]">
-                New · Starting October
-              </span>
-              <h2 className="font-serif text-[36px] font-light text-[#EFE9DE]">foot spa.</h2>
+              <h2 className="font-serif text-[36px] font-light text-[#EFE9DE]">japanese foot spa.</h2>
               <p className="mt-3 font-serif text-[15px] italic text-[#C9BFAE]">
                 &ldquo;{FOOT_SPA.tagline}&rdquo;
               </p>
@@ -269,9 +265,14 @@ export default function MenuPage() {
                 </div>
               </div>
 
-              <p className="mt-7 text-[12px] uppercase tracking-[0.16em] text-[#C9BFAE]">
-                Booking opens when Mary returns in October.
-              </p>
+              <a
+                href={BOOK_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-9 inline-block bg-[#F3E7E4] px-8 py-3.5 text-[11px] uppercase tracking-[0.18em] text-[#3E3833] hover:bg-white transition"
+              >
+                Book Japanese Foot Spa
+              </a>
             </div>
           </div>
 

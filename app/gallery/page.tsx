@@ -7,8 +7,8 @@ import { BOOK_URL, GALLERY_CLIPS } from '@/lib/site-data';
 type Photo = {
   src: string | null;
   label: string;
-  /** Wide or transparent art that must not be cropped — letterboxed on the tile instead. */
-  contain?: boolean;
+  /** CSS object-position for the cover crop — use when the subject isn't centred. */
+  position?: string;
   /** `src: null` renders a "Photo Coming Soon" tile — used while awaiting client media. */
   placeholder?: boolean;
 };
@@ -24,8 +24,9 @@ const PHOTOS: Photo[] = [
   { src: '/dermaplane.jpeg', label: 'Dermaplane' },
   { src: '/led-therapy.jpg', label: 'LED Light Therapy' },
   { src: '/IMG_6267.jpeg', label: 'The Details' },
-  // Wide transparent product lineup — contained so the whole range stays visible.
-  { src: '/PY_Family_Photo.png', label: 'Rhonda Allison Pro Youth', contain: true },
+  // Wide lineup, flattened onto the tile tan. Fills the tile like the Surface photo beside it
+  // (Mary, 2026-09-27); 30% keeps the pink Berry Wine + black Cherry Jubilee jar in frame.
+  { src: '/rhonda-allison-pro-youth.jpg', label: 'Rhonda Allison Pro Youth', position: '30% 50%' },
 ];
 
 export default function GalleryPage() {
@@ -101,20 +102,14 @@ export default function GalleryPage() {
                 className="reveal group relative aspect-[3/4] overflow-hidden bg-[#DAD3C4]"
                 style={{ transitionDelay: `${(idx % 3) * 90}ms` }}
               >
-                {photo.src && photo.contain ? (
+                {photo.src ? (
                   <>
                     <img
                       src={photo.src}
                       alt={photo.label}
-                      className="h-full w-full object-contain p-6 transition-transform duration-700 group-hover:scale-[1.03]"
+                      className="group-hover-zoom h-full w-full object-cover"
+                      style={photo.position ? { objectPosition: photo.position } : undefined}
                     />
-                    <div className="pointer-events-none absolute inset-x-0 bottom-0 p-4">
-                      <p className="text-[10px] uppercase tracking-[0.18em] text-[#5E564D]">{photo.label}</p>
-                    </div>
-                  </>
-                ) : photo.src ? (
-                  <>
-                    <img src={photo.src} alt={photo.label} className="group-hover-zoom h-full w-full object-cover" />
                     <div className="pointer-events-none absolute inset-x-0 bottom-0 bg-gradient-to-t from-[#3E3833]/65 to-transparent p-4 pt-10">
                       <p className="text-[10px] uppercase tracking-[0.18em] text-[#FAF6EF]">{photo.label}</p>
                     </div>

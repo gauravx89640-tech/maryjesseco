@@ -25,7 +25,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: `${BUSINESS_NAME} | Esthetics & Japanese Head Spa in Arvada, CO`,
   description:
-    'Boutique esthetics studio in Arvada, CO. Customized facials, Japanese Head Spa scalp treatments, brows, and skincare with licensed esthetician Mary Jesse.',
+    'Boutique esthetics studio in Arvada, CO. Customized facials, Japanese Head Spa scalp treatments, and skincare with licensed esthetician Mary Jesse.',
   alternates: {
     canonical: '/',
   },
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     siteName: BUSINESS_NAME,
     title: `${BUSINESS_NAME} | Esthetics & Japanese Head Spa in Arvada, CO`,
     description:
-      'Boutique esthetics studio in Arvada, CO. Customized facials, Japanese Head Spa scalp treatments, brows, and skincare with licensed esthetician Mary Jesse.',
+      'Boutique esthetics studio in Arvada, CO. Customized facials, Japanese Head Spa scalp treatments, and skincare with licensed esthetician Mary Jesse.',
     url: '/',
     locale: 'en_US',
     images: [{ url: '/studio-neon.jpeg', width: 1200, height: 630, alt: `${BUSINESS_NAME} treatment room` }],
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: `${BUSINESS_NAME} | Esthetics & Japanese Head Spa in Arvada, CO`,
     description:
-      'Boutique esthetics studio in Arvada, CO. Customized facials, Japanese Head Spa scalp treatments, brows, and skincare.',
+      'Boutique esthetics studio in Arvada, CO. Customized facials, Japanese Head Spa scalp treatments, and skincare.',
     images: ['/studio-neon.jpeg'],
   },
   generator: 'v0.app',
@@ -73,7 +73,7 @@ const localBusinessSchema = {
   '@type': 'BeautySalon',
   name: BUSINESS_NAME,
   description:
-    'Boutique esthetics studio offering customized facials, Japanese Head Spa scalp treatments, brows, and skincare in Arvada, Colorado.',
+    'Boutique esthetics studio offering customized facials, Japanese Head Spa scalp treatments, and skincare in Arvada, Colorado.',
   url: SITE_URL,
   telephone: '303.596.5857',
   email: 'MaryJesseandCo@gmail.com',

@@ -38,12 +38,11 @@ export const HEADSPA_INCLUDES = [
 ];
 
 /**
- * Foot Spa — Head Spa techniques applied to the feet. Mary's copy, verbatim.
- * NOT bookable until she returns from knee surgery in October 2026, so the block
- * shows a "starting October" note instead of a Book button. Swap in the CTA then.
+ * Japanese Foot Spa — Head Spa techniques applied to the feet. Mary's copy, verbatim.
+ * Always "Japanese Foot Spa", never just "Foot Spa" (her correction, 2026-09-27).
  */
 export const FOOT_SPA = {
-  name: 'Foot Spa',
+  name: 'Japanese Foot Spa',
   duration: '30 minutes',
   price: '$60',
   tagline: 'Because your feet deserve a facial too.',

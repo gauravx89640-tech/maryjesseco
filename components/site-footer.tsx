@@ -13,7 +13,9 @@ export default function SiteFooter() {
                 skin&nbsp;+&nbsp;scalp studio
               </span>
             </h3>
-            <p className="mt-1 text-[11px] uppercase tracking-[0.22em] text-[#C9BFAE]">From Zen to Corrected Skin</p>
+            <p className="mt-3 font-serif text-[16px] font-light italic text-[#C9BFAE]">
+              really good results <span className="not-italic text-[#A97D82]">+</span> ridiculously good feels
+            </p>
             <p className="mt-1 text-[11px] text-[#9C9184]">Esthetician · Hairstylist · Scalp Specialist</p>
             <div className="mt-6 space-y-2 text-[14px] text-[#DAD3C4]">
               <p><a href="tel:3035965857" className="hover:text-[#F3E7E4] transition">303.596.5857</a></p>

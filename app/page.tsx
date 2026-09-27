@@ -19,7 +19,7 @@ export default function HomePage() {
             personalized skin.<br />customized facials.<br />quiet luxury.
           </h1>
           <p className="mt-8 max-w-md text-[15px] leading-8 text-[#5E564D]">
-            A boutique studio for facials, Japanese Head Spa treatments, brows, and lashes — every service built around your skin, your scalp, and your goals.
+            A boutique studio for facials and Japanese Head Spa treatments — every service built around your skin, your scalp, and your goals.
           </p>
           <div className="mt-10 flex flex-wrap gap-4">
             <a
@@ -64,7 +64,7 @@ export default function HomePage() {
             choose your experience.
           </h2>
           <p className="mx-auto mt-6 max-w-xl text-[15px] leading-8 text-[#E4D2D0]">
-            Start with The Signature — your fully customized facial — then choose the add-on that matches your skin goals. Build the experience that&apos;s right for you.
+            Start with The Signature — your fully customized facial — then choose the elevation that matches your skin goals. Build the experience that&apos;s right for you.
           </p>
           <Link
             href="/menu"

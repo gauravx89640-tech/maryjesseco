@@ -24,7 +24,7 @@ export default function AboutPage() {
           <img
             src="/portrait2.jpg"
             alt="Mary Jesse, licensed esthetician"
-            className="absolute inset-0 h-full w-full object-cover object-[center_30%]"
+            className="absolute inset-0 h-full w-full object-cover object-[100%_10%]"
           />
         </div>
       </section>
@@ -59,7 +59,7 @@ export default function AboutPage() {
                 'Customized facials for acne, aging, sensitive & stressed skin',
                 'Japanese Head Spa — a facial for your scalp',
                 'Dermaplaning, micro infusion, peels & microneedling',
-                'Brows, lashes, and professional skincare coaching',
+                'Professional skincare coaching',
               ].map((item, idx) => (
                 <li key={idx} className="flex items-start gap-3 text-[14px] leading-8 text-[#5E564D]">
                   <span className="mt-px text-[#A97D82]">—</span>
