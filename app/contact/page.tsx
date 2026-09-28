@@ -5,8 +5,7 @@ import { CalendarCheck, MapPin, Phone } from 'lucide-react';
 import { useReveal } from '@/components/use-reveal';
 import { BOOK_URL } from '@/lib/site-data';
 
-// Replace with your Web3Forms access key from https://web3forms.com
-const WEB3FORMS_ACCESS_KEY = 'YOUR_WEB3FORMS_ACCESS_KEY';
+const WEB3FORMS_ACCESS_KEY = 'e6d3e3d3-8a32-4a81-9720-e1239ca62c98';
 
 export default function ContactPage() {
   useReveal();

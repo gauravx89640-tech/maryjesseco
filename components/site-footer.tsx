@@ -47,6 +47,12 @@ export default function SiteFooter() {
       </div>
       <div className="border-t border-[#4A403B] py-6 text-center">
         <p className="text-[11px] text-[#9C9184]">© {new Date().getFullYear()} Mary Jesse Skin + Scalp Studio. All rights reserved.</p>
+        <p className="mt-2 text-[10px] tracking-[0.12em] text-[#7A7266]">
+          Site by{' '}
+          <a href="https://forgestudio.one" target="_blank" rel="noopener" className="underline-offset-2 hover:text-[#C9BFAE] hover:underline transition">
+            Forge Studio
+          </a>
+        </p>
       </div>
     </footer>
   );

@@ -37,7 +37,7 @@ export default function SiteNav() {
           href={BOOK_URL}
           target="_blank"
           rel="noopener noreferrer"
-          className="hidden bg-[#A97D82] px-6 py-2.5 text-[11px] uppercase tracking-[0.16em] text-[#FAF6EF] hover:bg-[#946A6F] transition lg:inline-block"
+          className="ml-auto mr-4 inline-block bg-[#A97D82] px-4 py-2 text-[10px] uppercase tracking-[0.14em] text-[#FAF6EF] hover:bg-[#946A6F] transition lg:ml-0 lg:mr-0 lg:px-6 lg:py-2.5 lg:text-[11px] lg:tracking-[0.16em]"
         >
           Book Now
         </a>
