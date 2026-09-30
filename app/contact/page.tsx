@@ -86,7 +86,7 @@ export default function ContactPage() {
 
           {/* Details */}
           <div className="reveal flex flex-col space-y-6" style={{ transitionDelay: '120ms' }}>
-            <a href="tel:3035965857" className="flex items-center gap-4 text-[15px] text-[#3E3833] hover:text-[#A97D82] transition">
+            <a href="tel:+13035965857" className="flex items-center gap-4 text-[15px] text-[#3E3833] hover:text-[#A97D82] transition">
               <Phone className="h-5 w-5 flex-shrink-0 text-[#A97D82]" strokeWidth={1.6} />
               <span>303.596.5857</span>
             </a>

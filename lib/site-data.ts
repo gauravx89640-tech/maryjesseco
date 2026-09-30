@@ -88,6 +88,6 @@ export const REFLEXOLOGY = [
 export const GALLERY_CLIPS = [
   { src: '/studio-lobby.mp4', type: 'video' as const, label: 'The Arrival' },
   { src: '/studio-bed.mp4', type: 'video' as const, label: 'Your Treatment Room' },
-  { src: '/prod-wall.png', type: 'image' as const, label: 'The Product Wall' },
+  { src: '/prod-wall.jpg', type: 'image' as const, label: 'The Product Wall' },
   { src: '/studio-suite.mp4', type: 'video' as const, label: 'Inside the Suite' },
 ];

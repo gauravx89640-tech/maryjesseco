@@ -18,7 +18,7 @@ export default function SiteFooter() {
             </p>
             <p className="mt-1 text-[11px] text-[#9C9184]">Esthetician · Hairstylist · Scalp Specialist</p>
             <div className="mt-6 space-y-2 text-[14px] text-[#DAD3C4]">
-              <p><a href="tel:3035965857" className="hover:text-[#F3E7E4] transition">303.596.5857</a></p>
+              <p><a href="tel:+13035965857" className="hover:text-[#F3E7E4] transition">303.596.5857</a></p>
               <p><a href="mailto:MaryJesseandCo@gmail.com" className="hover:text-[#F3E7E4] transition">MaryJesseandCo@gmail.com</a></p>
               <p>7430 W 88th Ave Studio #207, Arvada, CO 80021</p>
             </div>
