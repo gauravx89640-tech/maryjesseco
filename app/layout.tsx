@@ -18,7 +18,7 @@ const _jost = Jost({
 
 // [CONFIRM: final domain] — placeholder until the custom domain is connected.
 // Canonical/OG URLs must NOT ship on the Pages preview domain at go-live.
-const SITE_URL = 'https://maryjesseco.pages.dev';
+const SITE_URL = 'https://https://maryjesseskinandscalp.com';
 const BUSINESS_NAME = 'Mary Jesse Skin + Scalp Studio';
 
 export const metadata: Metadata = {
