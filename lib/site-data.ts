@@ -1,4 +1,5 @@
 export const BOOK_URL = 'https://maryjesse.glossgenius.com/booking-flow';
+export const GIFT_CARD_URL = 'https://maryjesse.glossgenius.com/shop/gift-cards';
 
 export const REVIEWS = [
   { text: 'Mary does such a fabulous job taking care of my skin! I recently started going to her and can already notice an improvement!', author: 'Annie Shanahan' },

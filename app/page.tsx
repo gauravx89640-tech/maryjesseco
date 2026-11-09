@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { useReveal } from '@/components/use-reveal';
-import { BOOK_URL, REVIEWS } from '@/lib/site-data';
+import { BOOK_URL, GIFT_CARD_URL, REVIEWS } from '@/lib/site-data';
 
 export default function HomePage() {
   useReveal();
@@ -155,6 +155,24 @@ export default function HomePage() {
             <p className="mt-2 text-[11px] uppercase tracking-[0.2em] text-[#EFE9DE]/90">View the Gallery →</p>
           </div>
         </Link>
+      </section>
+
+      {/* Gift cards */}
+      <section className="w-full border-y border-[#E5DFD3] bg-[#EFE9DE] py-14 lg:py-16">
+        <div className="reveal mx-auto flex max-w-4xl flex-col items-center gap-6 px-6 text-center lg:px-10">
+          <span className="text-[11px] uppercase tracking-[0.24em] text-[#A97D82]">Gift Cards</span>
+          <p className="font-serif text-[26px] font-light italic leading-snug text-[#3E3833] lg:text-[34px]">
+            give the gift of really good results <span className="not-italic text-[#A97D82]">+</span> ridiculously good feels
+          </p>
+          <a
+            href={GIFT_CARD_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block border border-[#A97D82] px-9 py-4 text-[11px] uppercase tracking-[0.18em] text-[#6E4A50] hover:bg-[#FAF6EF] transition"
+          >
+            Shop Gift Cards
+          </a>
+        </div>
       </section>
 
       {/* Contact CTA */}

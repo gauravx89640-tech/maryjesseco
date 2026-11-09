@@ -4,6 +4,7 @@ import React from 'react';
 import Link from 'next/link';
 
 export const BOOK_URL = 'https://maryjesse.glossgenius.com/booking-flow';
+export const GIFT_CARD_URL = 'https://maryjesse.glossgenius.com/shop/gift-cards';
 
 const LINKS = [
   { href: '/menu', label: 'The Menu' },
@@ -32,6 +33,9 @@ export default function SiteNav() {
               {l.label}
             </Link>
           ))}
+          <a href={GIFT_CARD_URL} target="_blank" rel="noopener noreferrer" className="hover:text-[#A97D82] transition">
+            Gift Cards
+          </a>
         </div>
         <a
           href={BOOK_URL}
@@ -60,6 +64,9 @@ export default function SiteNav() {
                 {l.label}
               </Link>
             ))}
+            <a href={GIFT_CARD_URL} target="_blank" rel="noopener noreferrer" className="hover:text-[#A97D82] transition">
+              Gift Cards
+            </a>
             <a
               href={BOOK_URL}
               target="_blank"

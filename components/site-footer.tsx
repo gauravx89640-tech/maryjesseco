@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { BOOK_URL } from './site-nav';
+import { BOOK_URL, GIFT_CARD_URL } from './site-nav';
 
 export default function SiteFooter() {
   return (
@@ -29,6 +29,14 @@ export default function SiteFooter() {
               className="mt-8 inline-block bg-[#A97D82] px-7 py-3 text-[11px] uppercase tracking-[0.16em] text-[#FAF6EF] hover:bg-[#946A6F] transition"
             >
               Book Now
+            </a>
+            <a
+              href={GIFT_CARD_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="ml-3 mt-8 inline-block border border-[#C9BFAE] px-7 py-3 text-[11px] uppercase tracking-[0.16em] text-[#EFE9DE] hover:bg-[#4A403B] transition"
+            >
+              Gift Cards
             </a>
           </div>
           <div className="space-y-3 text-[12px]">
